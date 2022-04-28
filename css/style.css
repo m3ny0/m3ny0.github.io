@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Source+Code+Pro&display=swap');
+*{
+  font-family: 'Roboto Slab', serif;
+}
+html, body {
+  margin: 0;
+  height: 100%;
+  width: 100%;  
+  background: #222;
+  background-image: url('../img/3dpinballV2.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+body{
+  display: grid;  
+  grid-template-rows: auto;
+  min-height: 100vh;
+  grid-template-areas: 
+      'banner'
+      'aside'
+      'nav'
+      'footer'
+      'main'
+    ;
+}
+header{
+  padding-top: 3.5%;
+}
+aside{
+  font-size:x-large;
+  text-align: center;
+}
+nav{
+  font-size:larger;
+  padding-top: 2.5%;  
+}
+ul{  
+  list-style-type: none;
+}
+
+@media (min-width: 40em) {
+  body{
+    grid-template-columns: 70% auto;
+    column-gap: 2.3%;
+    grid-template-rows: 37% 6% 13% auto;
+    row-gap: 5%;
+    grid-template-areas: 
+      'main banner'
+      'main aside'
+      'main nav'
+      'main footer'
+    ;
+  }
+
+  main{
+    padding-left: 2.5%;
+  }
+
+  /*body{
+    grid-template-columns: 12em 1fr;
+    grid-template-rows: auto 1fr auto;
+  }
+  
+  header{
+    grid-column: span 2;
+  }
+
+  nav{
+    grid-row: span 2;
+  }*/
+}
+
+header {grid-area: banner;}
+aside {grid-area: aside;}
+nav {grid-area: nav;}
+main {grid-area: main;}
+footer {grid-area: footer;}
+
+/* LDC STYLE*/
+.trueLCD {    
+  font-family: 'Source Code Pro', monospace;  
+  color: #6857b0;
+  text-shadow: 2px 0 rgba(255, 0, 0, .9), -2px 0 rgba(0, 0, 255, .9);  
+}
+.fakeLCD{
+  font-family: 'Roboto Slab', serif;
+  color: #fff;
+  text-shadow: 2px 0 rgba(255, 0, 0, .9), -2px 0 rgba(0, 0, 255, .9); 
+}
+/* END LDC STYLE*/
+
