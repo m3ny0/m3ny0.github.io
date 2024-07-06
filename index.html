@@ -9,15 +9,16 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device=width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script src="js/script.js"></script>
     </head>
 
-    <body> 
+    <body onload="filterSelection('all')"> 
         <header>
-            <div class="container">
+            <div class="headcontainer">
                 <br>
                 <img class="headIMG" src="img/YMOstyle.gif" alt="alternating green and blue dots" >
                 <div class="centered">
-                    <h1 class="fakeLCD">Welcome to</h1>
+                    <h1 class="fakeLCD">Welcome to the</h1>
                     <h1 class="trueLCD">Martin Marques</h1>
                     <h1 class="fakeLCD">website!</h1>
                 </div>
@@ -29,29 +30,33 @@
                 <br>
                 <p style="font-size: x-large; font-weight: bold;">I'm a [REDACTED] years old <span class="fakeLCD">Brazilian Game Designer</span>, nice to meet you!</p>
                 <p style="font-size: large; font-weight: bold;">On this website you will find a recollection of my work, as well as some contact info.</p>
-                <p style="font-size: large; font-weight: bold;">And what work do you ask, well, I do have many side projects besides gaming that might peak your interest!</p>
-                <p style="font-size: large; font-weight: bold;">So, what do I do for living? Well, is easier to ask what I DON'T do.</p>
+                <p style="font-size: large; font-weight: bold;">My skills cover the essentials of Game Design and Prototyping, as you can see in the works below.</p>
+                <p style="font-size: large; font-weight: bold;">I also dwell into Game Localization, including Translation and Implementation, as well as Sound Design, on SFX and OST.</p>
                 <p style="font-size: xx-large; font-weight: bold;" class="fakeLCD">Take a look:</p>
             </div>
 
-            <table class="conversion-rate-list inFront">
-                <tr>
-                    <th><img src="img/games.gif" alt="blue games logo on fire"></th>
-                    <th><img src="img/localization.gif" alt="green localization logo whirling"></th>
-                    <th><img src="img/music.gif" alt="pink music logo"></th>
-                </tr>
-                <tr>
-                    <td><iframe class="inFront" frameborder="0" src="https://itch.io/embed/810200?bg_color=222222&amp;fg_color=eeeeee&amp;border_color=363636" width="208" height="167"><a href="https://deleatur.itch.io/cafezim-simulator">Cafezim Simulator by deleatur</a></iframe></td>
-                    <td><a href="https://www.moddb.com/mods/o-guia-do-iniciante" target="_blank"><img src="img/localized_1.png" alt="O Guia do Iniciante"></a></td>
-                    <td><iframe class="inFront" width="75%" height="175" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1129597912&color=%23241e1c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/m3ny0" title="Martin Marques" target="_blank" style="color: #cccccc; text-decoration: none;">Martin Marques</a> · <a href="https://soundcloud.com/m3ny0/sets/cafezim-simulator-ost" title="Cafezim Simulator Soundtrack" target="_blank" style="color: #cccccc; text-decoration: none;">Cafezim Simulator Soundtrack</a></div></td>
-                </tr>
-                <tr>
-                    <td><iframe class="inFront" frameborder="0" src="https://itch.io/embed/690756?dark=true" width="208" height="167"><a href="https://deleatur.itch.io/watchpaintdry">Watch Paint Dry -Fence Edition- by deleatur</a></iframe></td>
-                    <td></td>
-                    <td><iframe class="inFront" width="75%" height="175" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/572483139&color=%23232323&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/m3ny0" title="Martin Marques" target="_blank" style="color: #cccccc; text-decoration: none;">Martin Marques</a> · <a href="https://soundcloud.com/m3ny0/sets/shine-one-soundtrack" title="Shine One Soundtrack" target="_blank" style="color: #cccccc; text-decoration: none;">Shine One Soundtrack</a></div></td>
-                </tr>
+            <table class="conversion-rate-list" style="width: 80%">
+                <th style="width: 10%">
+                    <div id="myBtnContainer" class="inFront">
+                        <img class="btn active" onclick="filterSelection('all')"" src="img/all.gif" alt="red 'all' logo">
+                        <img class="btn" onclick="filterSelection('jogos')" src="img/games.gif" alt="blue games logo on fire">
+                        <img class="btn" onclick="filterSelection('local')" src="img/localization.gif" alt="green localization logo whirling">
+                        <img class="btn" onclick="filterSelection('sons')" src="img/music.gif" alt="pink music logo">                    
+                    </div>
+                </th>
+                <th>
+                    <div class="container, inFront">
+                        <div class="filterDiv jogos"><iframe src="https://widgets.gamejolt.com/package/v1?key=hqXTH3Gc" frameborder="0" width="300" height="200"></iframe></div>
+                        <div class="filterDiv jogos"><a href="https://drive.google.com/file/d/134Qvm-Fx4b2dLfKEAOwlyaAOHFefjNMv/view" target="_blank"><img src="img/gamed_1.png" width="200" alt="Greyscale Pong"></a></div>
+                        <div class="filterDiv jogos"><a href="https://simmer.io/@Hamsterking/brazil-2024" target="_blank"><img src="img/gamed_2.png" width="200" alt="Brazil 2024"></a></div>
+                        <div class="filterDiv jogos"><iframe class="inFront" frameborder="0" src="https://itch.io/embed/810200?bg_color=222222&amp;fg_color=eeeeee&amp;border_color=363636" width="208" height="167"><a href="https://deleatur.itch.io/cafezim-simulator">Cafezim Simulator by deleatur</a></iframe></div>
+                        <div class="filterDiv jogos"><iframe class="inFront" frameborder="0" src="https://itch.io/embed/690756?dark=true" width="208" height="167"><a href="https://deleatur.itch.io/watchpaintdry">Watch Paint Dry -Fence Edition- by deleatur</a></iframe></div>
+                        <div class="filterDiv local"><a href="https://www.moddb.com/mods/o-guia-do-iniciante" target="_blank"><img src="img/localized_1.png" alt="O Guia do Iniciante"></a></div>
+                        <div class="filterDiv sons"><iframe class="inFront" width="75%" height="175" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1129597912&color=%23241e1c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/m3ny0" title="Martin Marques" target="_blank" style="color: #cccccc; text-decoration: none;">Martin Marques</a> · <a href="https://soundcloud.com/m3ny0/sets/cafezim-simulator-ost" title="Cafezim Simulator Soundtrack" target="_blank" style="color: #cccccc; text-decoration: none;">Cafezim Simulator Soundtrack</a></div></div>
+                        <div class="filterDiv sons"><iframe class="inFront" width="75%" height="175" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/572483139&color=%23232323&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/m3ny0" title="Martin Marques" target="_blank" style="color: #cccccc; text-decoration: none;">Martin Marques</a> · <a href="https://soundcloud.com/m3ny0/sets/shine-one-soundtrack" title="Shine One Soundtrack" target="_blank" style="color: #cccccc; text-decoration: none;">Shine One Soundtrack</a></div></div>
+                    </div>
+                </th>
             </table>
-
             <div>
                 <br>
                 <p style="font-size: large; font-weight: bold;">You can also find some minor works of mine like:</p>
@@ -73,21 +78,22 @@
                     </tr>                    
                 </table>
             </div>
-
+            <hr>
             <div>
-                <br>
                 <p style="font-size: large; font-weight: bold;">Like what you see? Fell free to contact me at my e-mail:</p>
                 <a style="font-weight: bold;" class="fakeLCD inFront" href="mailto:martinassis.mmt@gmail.com">martinassis.mmt@gmail.com</a>
                 <br>
                 <p style="font-size: large; font-weight: bold;">You can also check out my social media, if you're into that kind of thing:</p>
                 <a class="inFront" href="https://www.linkedin.com/in/m3ny0" target="_blank"><img src="img/icon_linkedin.png" width="32px" title="LinkedIn: m3ny0" alt="LinkedIn: m3ny0"></a>&nbsp;&nbsp;&nbsp;
                 <a class="inFront" href="https://mastodon.gamedev.place/@m3ny0" rel="me" target="_blank"><img src="img/icon_mastodon.png" width="32px" title="Mastodon: @m3ny0@mastodon.gamedev.place" alt="Mastodon: @m3ny0@mastodon.gamedev.place"></a>&nbsp;&nbsp;&nbsp;
+                <a class="inFront" href="https://bsky.app/profile/m3ny0.bsky.social" rel="me" target="_blank"><img src="img/icon_bluesky.png" width="32px" title="Bluesky: @m3ny0.bsky.social" alt="Bluesky: @m3ny0.bsky.social"></a>&nbsp;&nbsp;&nbsp;
                 <a class="inFront" href="https://twitter.com/_m3ny0" target="_blank"><img src="img/icon_twitter.png" width="32px" title="Twitter: _m3ny0" alt="Twitter: _m3ny0"></a>&nbsp;&nbsp;&nbsp;
-                <a class="inFront" href="https://www.facebook.com/m3ny0" target="_blank"><img src="img/icon_facebook.png" width="32px" title="Facebook: m3ny0" alt="Facebook: m3ny0"></a>&nbsp;&nbsp;&nbsp;
                 <a class="inFront" href="https://www.instagram.com/_m3ny0/" target="_blank"><img src="img/icon_instagram.png" width="32px" title="Instagram: _m3ny0" alt="Instagram: _m3ny0"></a>&nbsp;&nbsp;&nbsp;
+                <a class="inFront" href="https://www.facebook.com/m3ny0" target="_blank"><img src="img/icon_facebook.png" width="32px" title="Facebook: m3ny0" alt="Facebook: m3ny0"></a>&nbsp;&nbsp;&nbsp;
                 <a class="inFront" href="https://m3ny0.medium.com" target="_blank"><img src="img/icon_medium.png" width="32px" title="Medium: m3ny0" alt="Medium: m3ny0"></a>&nbsp;&nbsp;&nbsp;
-                <a class="inFront" href="https://www.metacritic.com/user/m3ny0" target="_blank"><img src="img/icon_metacritic.png" width="32px" title="Metacritic: m3ny0" alt="Metacritic: m3ny0"></a>&nbsp;&nbsp;&nbsp;
-                <a class="inFront" href="https://www.imdb.com/user/ur154534772" target="_blank"><img src="img/icon_imdb.png" width="32px" title="IMDb: m3ny0" alt="IMDb: m3ny0"></a>
+                <a class="inFront" href="https://www.exophase.com/user/m3ny0" target="_blank"><img src="img/icon_exophase.png" width="32px" title="Exophase: m3ny0" alt="Exophase: m3ny0"></a>&nbsp;&nbsp;&nbsp;
+                <a class="inFront" href="https://www.imdb.com/user/ur154534772" target="_blank"><img src="img/icon_imdb.png" width="32px" title="IMDB: m3ny0" alt="IMDB: m3ny0"></a>&nbsp;&nbsp;&nbsp;
+                <a class="inFront" href="https://myanimelist.net/profile/m3ny0" target="_blank"><img src="img/icon_mal.png" width="32px" title="MyAnimeList: m3ny0" alt="MyAnimeList: m3ny0"></a>
             </div>
 
             <div>
@@ -99,6 +105,6 @@
             </div>
         </main>
         
-        <footer><p>&copy; 2022 Martin Marques</p></footer>
+        <footer><p>&copy; 2022-2024 Martin Marques</p></footer>
     </body>
 </html>

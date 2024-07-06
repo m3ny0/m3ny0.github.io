@@ -45,7 +45,7 @@ a.fakeLCD{
   position: relative;
   z-index: 5;
 }
-.container {
+.headcontainer {
   position: relative;
   text-align: center;
   color: white;  
@@ -55,6 +55,48 @@ a.fakeLCD{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+
+
+/* Style the buttons */
+.filterDiv {
+  vertical-align: top;
+  float: left;
+  /*background-color: #2196F3;
+  color: #ffffff;
+  width: 100px;
+  line-height: 100px;
+  text-align: center;*/
+  margin: 5px;
+  
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.container {
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.btn{
+  border: none;
+  outline: none;
+  padding: 3px 5px;
+  background-color: inherit;
+  filter: grayscale(0);
+  cursor: pointer;
+}
+
+.btn:hover {
+  filter: grayscale(0.5);
+}
+
+.btn.active {
+  filter: grayscale(1);
 }
 
 @media only screen and (max-width: 700px) {
